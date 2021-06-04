@@ -2,6 +2,9 @@
 title: Conor Higgins' Resume"
 author: Conor Higgins
 date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
 output:
   pagedown::html_resume:
     css: ['css/custom_resume.css', 'css/styles.css', 'resume']
