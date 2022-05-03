@@ -67,32 +67,26 @@ Contact {#contact}
 Language & Visualisation Skills {#skills}
 --------------------------------------------------------------------------------
 
-Highly Skilled
+Highly Skilled & Experienced
 
-- R 
-- LaTeX
-- Microsoft Office (Including Excel, VBA, PowerPoint etc.)
-- SAS
-- Shiny
-- Markdown
-- SQL (Snowflake, SQLServer etc)
-- Power BI
-- Tableau
-- Python
-- HTML
-- CSS
-- DSS
-- Looker
+- SQL (Predominantly on Snowflake)
 - dbt
-- 
+- Airflow 
+- Python
+- R
+- git
+- bash
+- Looker
+- Tableau
+- PowerBI
+- MS Office Suite
 
-Experience With
+Experience With & Learning
 
 - AWS 
-- Matlab
-- STATA
 - Docker
-- Airflow
+- HTML
+- CSS
 
 
 More Info {#more-info}
@@ -114,7 +108,14 @@ Conor Higgins {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "I am a recent graduate of Lancaster University, looking to further my career within Data Science and Statistics. I am an outstanding communicator and leader with high levels of determination and motivation. Excellent ability to bring enthusiasm, focus, and a positive demeanor to the workplace. Flexible, dependable, and eager to work both independently as well as in a team towards goals. I am a confident public speaker and collaborator, as evidenced by my participation in and leadership of many teams through both my extra-curricular and work experiences. I am a problem solver and I am confident I would be a valuable asset to any team."
+intro_text <- 
+
+"I am an outstanding communicator and leader with high levels of determination and motivation. 
+Excellent ability to bring enthusiasm, focus, and a positive demeanor to the workplace.
+Flexible, dependable, and eager to work both independently as well as in a team towards goals. 
+I am a confident public speaker and collaborator,
+as evidenced by my participation in and leadership of many teams through both my extra-curricular and work experiences. 
+I am a problem solver and I am confident I would be a valuable asset to any team."
 
 cat(sanitize_links(intro_text))
 ```
@@ -141,6 +142,6 @@ position_data %>% print_section('positions')
 Interests & Other {data-icon=user}
 --------------------------------------------------------------------------------
 
-I pride myself in taking my passion for data science and statistics outside of my role at work and my time in academia into my personal life. I am a keen learner and I am constantly researching and exploring multiple fields to innovate the way I operate. I take part in [TidyTuesday](https://github.com/rfordatascience/tidytuesday) weekly and I am currently learning to improve my Python and Power BI skills.
+I pride myself in taking my passion for data science and statistics outside of my role at work and my time in academia into my personal life. I am a keen learner and I am constantly researching and exploring multiple fields to innovate the way I operate.
 
-Aside from my interest in statistics, I am an avid sportsman. I have captained teams for both snooker and football throughout my entire life, and I am currently in pursuit of football coaching badges. My deep interest of football has driven me to explore it from a statistical point of view and perform analytics on data wherever possible.
+Aside from my interest in statistics, I am an avid sportsman. I have captained teams for both snooker and football throughout my entire life, and I am currently in pursuit of football coaching badges. My deep interest of football has driven me to explore it from a statistical point of view and perform analytics on data wherever possible, including my dissertation.
