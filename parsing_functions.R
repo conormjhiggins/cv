@@ -87,6 +87,8 @@ print_section <- function(position_data, section_id){
       "\n\n",
       "{timeline}", 
       "\n\n",
+      "{main_desc}",
+      "\n\n",
       "{description_bullets}",
       "\n\n\n",
     )

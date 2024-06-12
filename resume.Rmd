@@ -1,6 +1,6 @@
 ---
-title: Conor Higgins' Resume"
-author: Conor Higgins
+title: Hannah Banks' Resume"
+author: Hannah Banks
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
@@ -25,14 +25,14 @@ library(glue)
 PDF_EXPORT <- TRUE
 
 # Holds all the links that were inserted for placement at the end
-links <- c("https://twitter.com/conormjhiggins","https://github.com/conormjhiggins")
+links <- c("https://www.linkedin.com/in/hannah-banks-510707216/")
 
 source('parsing_functions.R')
 
 
 # First let's get the data, filtering to only the items tagged as
 # Resume items
-position_data <- read_csv('positions.csv') %>% 
+position_data <- read_csv2('positions.csv') %>% 
   filter(in_resume) %>% 
   mutate(
     # Build some custom sections by collapsing others
@@ -57,47 +57,44 @@ Contact {#contact}
 
 
 
-- <i class="fa fa-envelope"></i> conormjhiggins@gmail.com
-- <i class="fa fa-twitter"></i> [conormjhiggins](https://twitter.com/conormjhiggins)
-- <i class="fa fa-github"></i> [github.com/conormjhiggins](https://github.com/conormjhiggins)
-- <i class="fa fa-phone"></i> (+44) 7728 434048
+- <i class="fa fa-envelope"></i> hannah.banks01@yahoo.com
+- <i class="fa fa-linkedin"></i> [Hannah Banks](https://www.linkedin.com/in/hannah-banks-510707216/)
+- <i class="fa fa-phone"></i> (+44) 7944 407691
 
 
 
-Language & Visualisation Skills {#skills}
+Skills {#skills}
 --------------------------------------------------------------------------------
 
-Highly Skilled & Experienced
+Software
 
-- SQL (Predominantly on Snowflake)
-- dbt
-- Airflow 
-- Python
-- R
-- git
-- bash
-- Looker
-- Tableau
-- PowerBI
-- MS Office Suite
+- Snapfull
+- Linnworks
+- MACS Software 
+- Shopify
+- Sorted PRO
+- Hubspot
+- Amazon Marketplace
+- Fulfilled By Amazon
+- Zendesk
+- Health Roster
+- Merlin
+- Matchmaker
+- Microsoft Suite
 
-Experience With & Learning
+Soft Skills
 
-- AWS 
-- Docker
-- HTML
-- CSS
-- Fivetran
-- Kubernetes
-- Prefect
+- Communication
+- Time Management
+- Organisation
+- Customer Relationship Building
+- Leadership
+- Teamwork
+- Problem Solving
 
 
 More Info {#more-info}
 --------------------------------------------------------------------------------
-
-Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
-
-Source code: [github.com/conormjhiggins/cv](https://github.com/conormjhiggins/cv).
 
 Last updated on `r Sys.Date()`.
 
@@ -107,36 +104,31 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Conor Higgins {#title}
+Hannah Banks {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
 intro_text <- 
 
-"I am an outstanding communicator and leader with high levels of determination and motivation. 
-Excellent ability to bring enthusiasm, focus, and a positive demeanor to the workplace.
-Flexible, dependable, and eager to work both independently as well as in a team towards goals. 
-I am a confident public speaker and collaborator,
-as evidenced by my participation in and leadership of many teams through both my extra-curricular and work experiences. 
-I am a problem solver and I am confident I would be a valuable asset to any team."
+"Over the past 5 years, I have worked in varied areas of customer service, developing my skills in all
+aspects of relationship building, with a sharp focus on quality, communication and performance. I
+pride myself on being able to manage my workload independently as well as working well in a
+team. My strengths are in identifying resolutions in the face of issues with professionalism and
+efficiency. I have a hands-on approach to all aspects of work, with an enthusiastic can-do attitude."
 
 cat(sanitize_links(intro_text))
 ```
-
-
-
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-position_data %>% print_section('education')
-```
-
-
 
 Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
 position_data %>% print_section('positions')
+```
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('education')
 ```
