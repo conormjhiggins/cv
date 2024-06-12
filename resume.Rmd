@@ -87,6 +87,9 @@ Experience With & Learning
 - Docker
 - HTML
 - CSS
+- Fivetran
+- Kubernetes
+- Prefect
 
 
 More Info {#more-info}
@@ -137,11 +140,3 @@ Experience {data-icon=suitcase}
 ```{r}
 position_data %>% print_section('positions')
 ```
-
-
-Interests & Other {data-icon=user}
---------------------------------------------------------------------------------
-
-I pride myself in taking my passion for data science and statistics outside of my role at work and my time in academia into my personal life. I am a keen learner and I am constantly researching and exploring multiple fields to innovate the way I operate.
-
-Aside from my interest in statistics, I am an avid sportsman. I have captained teams for both snooker and football throughout my entire life, and I am currently in pursuit of football coaching badges. My deep interest of football has driven me to explore it from a statistical point of view and perform analytics on data wherever possible, including my dissertation.
