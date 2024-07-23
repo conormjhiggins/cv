@@ -68,7 +68,7 @@ Skills {#skills}
 
 Software
 
-- Snapfull
+- Snapfulfil
 - Linnworks
 - MACS Software 
 - Shopify
