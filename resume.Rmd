@@ -110,7 +110,10 @@ Hannah Banks {#title}
 ```{r}
 intro_text <- 
 
-"Over the past 5 years, I have worked in varied areas of customer service, developing my skills in all
+"
+Relocated to North West England, August 2024
+
+Over the past 5 years, I have worked in varied areas of customer service, developing my skills in all
 aspects of relationship building, with a sharp focus on quality, communication and performance. I
 pride myself on being able to manage my workload independently as well as working well in a
 team. My strengths are in identifying resolutions in the face of issues with professionalism and
