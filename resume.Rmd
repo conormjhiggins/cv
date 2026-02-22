@@ -41,32 +41,37 @@ CV |> print_contact_info()
 
 
 
-Language & Visualisation Skills {#skills}
+Technical Skills {#skills}
 --------------------------------------------------------------------------------
 
 Highly Skilled & Experienced
 
-- SQL (Predominantly on Snowflake)
-- dbt
-- Airflow
+- SQL (Snowflake)
 - Python
-- R
-- git
+- Snowflake
+- AWS
+- Docker
+- Airflow
+- Prefect
+- git / CI/CD
 - bash
-- Looker
-- Tableau
-- PowerBI
-- MS Office Suite
+- R
+- Looker (LookML)
+- dbt
 
 Experience With & Learning
 
-- AWS
-- Docker
-- HTML
-- CSS
-- Fivetran
+- Terraform
 - Kubernetes
-- Prefect
+- Dagster
+- Fivetran
+- Tableau / PowerBI
+
+
+Note {#prior-exp}
+--------------------------------------------------------------------------------
+
+*Feel free to [get in touch](mailto:conormjhiggins@gmail.com) for further information on experience and projects prior to 2020.*
 
 
 More Info {#more-info}

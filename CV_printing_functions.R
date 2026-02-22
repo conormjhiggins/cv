@@ -124,6 +124,7 @@ print_section <- function(cv, section_id, glue_template = "default") {
   section_data %<>%
     dplyr::mutate(
       timeline = dplyr::case_when(
+        is.na(end)    ~ glue("Current - {start}"),
         is.na(start)  ~ as.character(end),
         start == end  ~ as.character(end),
         TRUE          ~ glue("{end} - {start}")
