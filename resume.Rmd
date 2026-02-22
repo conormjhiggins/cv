@@ -48,7 +48,6 @@ Highly Skilled & Experienced
 
 - SQL (Snowflake)
 - Python
-- Snowflake
 - AWS
 - Docker
 - Airflow
