@@ -1,48 +1,29 @@
 ---
-title: Conor Higgins' Resume"
+title: Conor Higgins' Resume
 author: Conor Higgins
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
-    value: true
+    value: false
 output:
   pagedown::html_resume:
-    css: ['css/custom_resume.css', 'css/styles.css', 'resume']
-    # set it to true for a self-contained HTML page but it'll take longer to render
+    css: ['dd_cv.css', 'dd_resume.css', 'resume']
     self_contained: true
 ---
 
-
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
-  results='asis', 
+  results = 'asis',
   echo = FALSE
 )
-library(tidyverse)
-library(glue)
 
-# Set this to true to have links turned into footnotes at the end of the document
-PDF_EXPORT <- TRUE
+source("CV_printing_functions.R")
 
-# Holds all the links that were inserted for placement at the end
-links <- c("https://twitter.com/conormjhiggins","https://github.com/conormjhiggins")
-
-source('parsing_functions.R')
-
-
-# First let's get the data, filtering to only the items tagged as
-# Resume items
-position_data <- read_csv('positions.csv') %>% 
-  filter(in_resume) %>% 
-  mutate(
-    # Build some custom sections by collapsing others
-    section = case_when(
-      section %in% c('research_positions', 'industry_positions') ~ 'positions', 
-      section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
-      TRUE ~ section
-    )
-  ) 
-
+CV <- create_CV_object(
+  data_location = "./",
+  pdf_mode = params$pdf_mode,
+  resume_mode = TRUE
+)
 ```
 
 
@@ -51,16 +32,12 @@ Aside
 
 
 
-
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-
-
-- <i class="fa fa-envelope"></i> conormjhiggins@gmail.com
-- <i class="fa fa-twitter"></i> [conormjhiggins](https://twitter.com/conormjhiggins)
-- <i class="fa fa-github"></i> [github.com/conormjhiggins](https://github.com/conormjhiggins)
-- <i class="fa fa-phone"></i> (+44) 7728 434048
+```{r}
+CV |> print_contact_info()
+```
 
 
 
@@ -71,7 +48,7 @@ Highly Skilled & Experienced
 
 - SQL (Predominantly on Snowflake)
 - dbt
-- Airflow 
+- Airflow
 - Python
 - R
 - git
@@ -83,7 +60,7 @@ Highly Skilled & Experienced
 
 Experience With & Learning
 
-- AWS 
+- AWS
 - Docker
 - HTML
 - CSS
@@ -95,7 +72,7 @@ Experience With & Learning
 More Info {#more-info}
 --------------------------------------------------------------------------------
 
-Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+Made w/ [**pagedown**](https://github.com/rstudio/pagedown).
 
 Source code: [github.com/conormjhiggins/cv](https://github.com/conormjhiggins/cv).
 
@@ -111,16 +88,7 @@ Conor Higgins {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- 
-
-"I am an outstanding communicator and leader with high levels of determination and motivation. 
-Excellent ability to bring enthusiasm, focus, and a positive demeanor to the workplace.
-Flexible, dependable, and eager to work both independently as well as in a team towards goals. 
-I am a confident public speaker and collaborator,
-as evidenced by my participation in and leadership of many teams through both my extra-curricular and work experiences. 
-I am a problem solver and I am confident I would be a valuable asset to any team."
-
-cat(sanitize_links(intro_text))
+CV <- print_text_block(CV, "intro")
 ```
 
 
@@ -129,7 +97,7 @@ Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('education')
+CV <- print_section(CV, 'education')
 ```
 
 
@@ -138,5 +106,9 @@ Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('positions')
+CV <- print_section(CV, 'industry_positions')
+```
+
+```{r}
+print_links(CV)
 ```

@@ -2,3 +2,10 @@
 *Rproj
 .Rhistory
 resume_files/
+.secrets
+.DS_Store
+README.html
+*_cache/
+cv.html
+ddcv_cache.rds
+cached_cv_data
